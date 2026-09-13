@@ -17,7 +17,7 @@ app.get('/api/saludo', (req, res) => {
 // Precio USDT/BRL desde Binance Spot
 app.get('/api/usdt-brl', async (req, res) => {
   try {
-    const r = await fetch('https://api.binance.com/api/v3/ticker/price?symbol=USDTBRL');
+    const r = await await fetch('https://data-api.binance.vision/api/v3/ticker/price?symbol=USDTBRL')
     const data = await r.json();
     res.json(data); // {symbol:"USDTBRL", price:"5.79..."}
   } catch (e) {
